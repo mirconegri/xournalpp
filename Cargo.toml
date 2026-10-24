@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "xopp-rust",
+]
+default-members = ["xopp-rust"]
+resolver = "2"
