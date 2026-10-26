@@ -1,17 +1,7 @@
-mod app;
-mod history;
-mod io;
-mod model;
-mod render;
-mod theme;
-mod tools;
-
-use app::XoppApp;
+use xopp_rust::XoppApp;
 use eframe::egui;
 
-// Application entry point for xopp-rust
 fn main() -> eframe::Result<()> {
-    // Configure window creation options
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
             .with_title("Xournal++ Modern (Rust)")
@@ -21,7 +11,6 @@ fn main() -> eframe::Result<()> {
         ..Default::default()
     };
 
-    // Launch modern GPU-accelerated event loop
     eframe::run_native(
         "Xournal++ Modern",
         native_options,

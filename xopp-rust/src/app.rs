@@ -1,4 +1,4 @@
-use eframe::egui::{self, Color32, Key, Modifiers, Pos2, Rect, Sense, Stroke as EguiStroke, Vec2};
+use eframe::egui::{self, Color32, Key, Sense, Stroke as EguiStroke, Vec2};
 use crate::history::{Action, HistoryManager};
 use crate::io::{load_xopp, save_xopp};
 use crate::model::{Color, Document, PageBackgroundType, Point, Stroke};

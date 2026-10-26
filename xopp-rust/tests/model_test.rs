@@ -1,5 +1,4 @@
-use xopp_rust::model::{Color, Document, Page, PageBackgroundType, Point, Stroke};
-use xopp_rust::io::{load_xopp, save_xopp};
+use xopp_rust::model::{Color, Document, Point, Stroke};
 
 #[test]
 fn test_document_creation_and_pages() {
@@ -18,4 +17,10 @@ fn test_stroke_hit_detection() {
 
     assert!(stroke.hits(&Point::new(30.0, 30.0, 1.0), 3.0));
     assert!(!stroke.hits(&Point::new(100.0, 100.0, 1.0), 3.0));
+}
+
+#[test]
+fn test_layer_default_is_visible() {
+    let layer = xopp_rust::model::Layer::default();
+    assert!(layer.visible);
 }
